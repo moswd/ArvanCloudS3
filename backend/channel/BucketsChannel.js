@@ -68,7 +68,7 @@ type = s3
 provider = Other
 access_key_id = ${profile.access_key}
 secret_access_key = ${profile.secret_key}
-${profile.provider != "arvan" ? `region = ${region}` : ``}
+region = ${region}
 endpoint = ${profile.endpoint_url}`;
 
         await fs.writeFile("rclone/rclone-config.conf", config);
